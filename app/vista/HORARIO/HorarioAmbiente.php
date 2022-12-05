@@ -23,7 +23,7 @@
             <br>
             <div class="table-responsive">
               <table class="table" id="tablaHorario" style="width:100%">
-                <thead >
+                <thead>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">AMBIENTE</th>
@@ -118,8 +118,6 @@
       </div>
     </div>
 
-
-
     <form action="" method="POST" id="RegistrarEnHorario">
       <div class="modal fade" id="ModalLLenarHorario" tabindex="-1">
         <div class="modal-dialog ">
@@ -130,14 +128,14 @@
             </div>
             <div class="modal-body">
               <div class="container">
-              <div class="row">
+                <div class="row">
                   <div class="col-12">
                     <b>PROGRAMA</b>
                     <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="programa_horario" id="programa_horario" title="---SELECCIONE---">
                     </select>
                   </div>
-              </div>
-              <div class="row">
+                </div>
+                <div class="row">
                   <div class="col-12">
                     <b>FICHA</b>
                     <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="ficha_horario" id="ficha_horario">
@@ -148,7 +146,7 @@
                   <div class="col-12">
                     <b>COMPETENCIA</b>
                     <input type="hidden" id="id_compe" name="id_compe">
-                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="competencia_horario" id="competencia_horario" title = ""></select>
+                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="competencia_horario" id="competencia_horario" title=""></select>
                   </div>
                 </div>
                 <div class="row">
@@ -198,6 +196,117 @@
         </div>
       </div>
     </form>
+
+    <!-- Inicio del modal de datos para iniciar-->
+
+    <form action="" method="POST" id="RegistrarEnHorario2">
+      <div class="modal fade" id="ModalLLenarHorario2" tabindex="-1">
+        <div class="modal-dialog ">
+          <div class="modal-content">
+            <div class="jesus-header">
+              <h5 class="modal-title"><b style="color:white;">EDITAR &nbsp;<label id="DiaYHora"></label></b></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <b>PROGRAMA</b>
+                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="programa_horarioE" id="programa_horarioE" title="---SELECCIONE---">
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>FICHA</b>
+                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="ficha_horarioE" id="ficha_horarioE">
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>COMPETENCIA</b>
+                    <input type="hidden" id="id_compe" name="id_compe">
+                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="competencia_horarioE" id="competencia_horarioE" title=""></select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>RESULTADOS</b><br>
+                    <select name="resultado_horarioE" id="resultado_horarioE" data-width="100%" multiple multiple title="--SELECCIONE--" class="form-control selectpicker">
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>INSTRUCTOR</b>
+                    <select class="selectpicker" data-show-subtext="true" data-live-search="true" data-width="100%" data-size="3" name="instructor_horarioE" id="instructor_horarioE">
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>COLOR</b>
+                    <select class="selectpicker" data-width="100%" data-size="3" name="color_horarioE" id="color_horarioE">
+                      <option value="null">--SELECCIONE--</option>
+                      <option value="azul">AZUL</option>
+                      <option value="verde">VERDE</option>
+                      <option value="morado">MORADO</option>
+                      <option value="rojo">ROJO</option>
+                      <option value="amarillo">AMARILLO</option>
+                      <option value="rosado">ROSADO</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <b>HORAS</b>
+                    <input type="number" id="horas_horarioE" name="horas_horarioE" class="form-control">
+                    <input type="hidden" id="idtd" name="idtd">
+                    <input type="hidden" id="id_horario" name="id_horario">
+                    <input type="hidden" id="id_salon" name="id_salon">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+              <button type="submit" class="btn btn-primary">GUARDAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Fin del modal -->
+
+    <!-- Modal para modificar el horario guardado -->
+    <form action="" method="POST" id="EditarEnHorario">
+      <div class="modal fade" id="ModalEditarHorario" tabindex="-1">
+      <div class="modal-dialog ">
+          <div class="modal-content">
+            <div class="jesus-header">
+              <h5 class="modal-title"><b style="color:white;">AGREGAR &nbsp;<label id="DiaYHora"></label></b></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <b>PROGRAMA</b>
+                    <input type="text" id="contenido">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+              <button type="submit" class="btn btn-primary">GUARDAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Fin del modal -->
   </section>
 
 </main>

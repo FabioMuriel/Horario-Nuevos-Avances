@@ -194,6 +194,21 @@ class HorarioModelo
             $x->execute();
             return $x->fetch(PDO::FETCH_ASSOC);
     }
+    static public function EditarHorario($datos)
+    {
+        $x = Conexion::conectar()->prepare("UPDATE tbl_horario SET tbl_horario_TABLA=:tabla WHERE tbl_horario_ID=:id_horario");
+        $x->bindParam(":id_horario", $datos["id_horario"], PDO::PARAM_INT);
+        $x->bindParam(":tabla", $datos["tabla"], PDO::PARAM_STR);
+        if ($x->execute()) {return true;} else {return false;}
+        
 
+        $y = Conexion::conectar()->prepare("UPDATE tbl_ficha_horario SET tbl_ficha_horario_ID = :id_horario ,tbl_ficha_ID = :ficha, tbl_instructor_ID = :instructor, tbl_salon_ID = :id_salon, tbl_competencia_ID = :competencia WHERE tbl_horario_POSICION = :posicion");
 
+        $y->bindParam(':ficha', $datos['ficha'], PDO::PARAM_INT);
+        $y->bindParam(':instructor', $datos['instructor'], PDO::PARAM_INT);
+        $y->bindParam(':id_salon', $datos['id_salon'], PDO::PARAM_INT);
+        $y->bindParam(':competencia', $datos['competencia'], PDO::PARAM_INT);
+        $y->bindParam(':posicion', $datos['posicion'], PDO::PARAM_INT);
+        if ($y->execute()) {return true;} else {return false;}
+    }
 }

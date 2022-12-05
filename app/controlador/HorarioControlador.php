@@ -58,6 +58,11 @@ class HorarioControlador
 		$respuesta = HorarioModelo::ConsultarHorarioFicha($id);
 		return $respuesta;
 	}
+	public function EditarHorario($datos)
+	{
+		$respuesta = HorarioModelo::EditarHorario($datos);
+		return $respuesta;
+	}
 }
 
 
@@ -242,6 +247,36 @@ if (isset($_POST["opcion"]))
 
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ActualizarHorario($datos);
+		if ($respuesta) :
+			echo 1;
+		else :
+			echo 2;
+		endif;
+	}
+	else if($_POST["opcion"] == "EditarHorario")
+	{
+		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
+		$tabla= (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
+		$competencia= (isset($_POST['competencia'])) ? $_POST['competencia'] : null;
+		$ficha= (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
+		$instructor= (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
+		$id_salon= (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
+		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas= (isset($_POST['horas'])) ? $_POST['horas'] : null;
+
+		$datos=[
+			"id_horario"=>$id_horario,
+			"id_salon"=>$id_salon,
+			"competencia"=>$competencia,
+			"ficha"=>$ficha,
+			"instructor"=>$instructor,
+			"posicion"=>$posicion,
+			"horas"=>$horas,
+			"tabla"=>$tabla
+		];
+
+		$respuesta = new HorarioControlador();
+		$respuesta = $respuesta->EditarHorario($datos);
 		if ($respuesta) :
 			echo 1;
 		else :

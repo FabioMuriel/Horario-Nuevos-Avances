@@ -221,7 +221,7 @@ $(document).ready(function () {
                             else {
                                 if (color === "azul") {
                                     while (contador <= numeroDeHoras) {
-                                        $('#' + sumador).html('<label class="cuadroAzul" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a class = "ver-mas" id = "VerMas" name = "VerMas">EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        $('#' + sumador).html('<label class="cuadroAzul" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
                                         sumador = sumador + 10;
                                         contador = contador + 1;
                                     }
@@ -298,7 +298,60 @@ $(document).ready(function () {
             });
         }
     });
+    //Funcion para editar el horario
+    $(document).on("click", "#Editar", function () {
+        idtd = $(this).attr('data-row');
+        $("#ModalLLenarHorario2").modal('show');
+    });
 
+    $("#RegistrarEnHorario2").submit(function (e) {
+        e.preventDefault();
+        id_horario = $("#id_horario").val();
+        id_salon = $("#id_salon").val();
+        competencia = $("#competencia_horarioE").val();
+        resultados = $("#resultado_horarioE").val();
+        instructor = $("#instructor_horarioE").val();
+        ficha = $("#ficha_horarioE").val();
+        salon = $("#salon_horario").val();
+        color = $("#color_horario").val();
+        //Textos de seleccion
+        texto_ficha = $("#ficha_horarioE option:selected").text();
+        texto_competencia = $("#competencia_horarioE option:selected").text();
+        texto_resultado = $("#resultado_horarioE option:selected").text();
+        texto_instructor = $("#instructor_horarioE option:selected").text();
+        texto_salon = $("#salon_horario option:selected").text();
+        sumador = parseInt(idtd);
+        contadorLabel = 0;
+        horas = $("#horas_horarioE").val();
+        //
+        if (horas > 0) {
+            $('#' + sumador).html('<label class="cuadroAzul" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+        }
+        opcion = "EditarHorario";
+        tabla = $("#CargarHorario").html();
+        $.ajax({
+            url: "app/controlador/HorarioControlador.php",
+            type: "POST",
+            data: { opcion: opcion, horas: horas, posicion: idtd, id_horario: id_horario, tabla: tabla, competencia: competencia, resultados: resultados, ficha: ficha, instructor: instructor, id_salon: id_salon }
+        }).done(function (data) {
+            Swal.close();
+            if (data == 1) {
+                $("#ModalLLenarHorario2").modal("hide");
+                $("#programa_horarioE").val("null").selectpicker('refresh');
+                $("#ficha_horarioE").val("null").selectpicker('refresh');
+                $("#competencia_horarioE").val("null").selectpicker('refresh');
+                $("#resultado_horarioE").val("null").selectpicker('refresh');
+                $("#instructor_horarioE").val("null").selectpicker('refresh');
+                $("#color_horarioE").val("null").selectpicker('refresh');
+                $("#horas_horarioE").val("");
+            }
+            else {
+                alert(data);
+            }
+        });
+
+    })
+    //Fin de la funciion para editar el horario
 
     $(document).on("click", ".borrar", function () {
         opcion = "BorrarCasillaHorario";
@@ -426,9 +479,9 @@ $(document).ready(function () {
                     salon = datos[i].salon;
                     instructor = datos[i].nombres + " " + datos[i].apellidos;
                     $('#' + posicion).html('<label style="font-size:9px;">' + salon + '<br>' + competencia + ' <br>' + instructor + '</label>');
-                    
+
                 }
-            }else{                
+            } else {
             }
         });
     });
