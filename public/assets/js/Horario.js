@@ -261,6 +261,69 @@ $(document).ready(function () {
                                         contador = contador + 1;
                                     }
                                 }
+                                else if (color == "gris") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroGris" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "naranja") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroNaranja" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "vinotinto") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroVinotinto" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "cyan") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroCyan" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "jade") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroJade" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "ambar") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroAmbar" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "azul rey") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroRey  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "pardo") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroPardo  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
+                                else if (color == "carmin") {
+                                    while (contador <= horas) {
+                                        $('#' + sumador).html('<label class="cuadroCarmin  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                                        sumador = sumador + 10;
+                                        contador = contador + 1;
+                                    }
+                                }
                                 tabla = $("#CargarHorario").html();
                                 opcion = "ActualizarHorario";
                                 $.ajax({
@@ -362,6 +425,69 @@ $(document).ready(function () {
         else if (color == "rosado") {
             while (contador <= horas) {
                 $('#' + sumador).html('<label class="cuadroRosado" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "gris") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroGris" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "naranja") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroNaranja" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "vinotinto") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroVinotinto" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "cyan") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroCyan" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "jade") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroJade" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "ambar") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroAmbar" style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "azul rey") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroRey  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "pardo") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroPardo  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
+                sumador = sumador + 10;
+                contador = contador + 1;
+            }
+        }
+        else if (color == "carmin") {
+            while (contador <= horas) {
+                $('#' + sumador).html('<label class="cuadroCarmin  " style="font-size:10px;"><a class="borrar" data-instructor="' + instructor + '"  data-row="' + sumador + '"><i class="bi-x-square-fill"></i></a><br>&nbsp;' + texto_competencia + '&nbsp;<br>&nbsp;&nbsp;' + "RESULTADOS" + '&nbsp;&nbsp;<br>&nbsp;' + resultados + '&nbsp;&nbsp;<br>&nbsp;' + texto_instructor + '&nbsp;&nbsp;<br>&nbsp;' + texto_ficha + '&nbsp;&nbsp;<br>&nbsp;' + '<a  data-row="' + sumador + '" id = "Editar"  name = "Editar" >EDITAR</a>' + '&nbsp;<br><br></label>');
                 sumador = sumador + 10;
                 contador = contador + 1;
             }

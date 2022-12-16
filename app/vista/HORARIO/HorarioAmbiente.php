@@ -169,11 +169,21 @@
                     <select class="selectpicker" data-width="100%" data-size="3" name="color_horario" id="color_horario">
                       <option value="null">--SELECCIONE--</option>
                       <option value="azul">AZUL</option>
-                      <option value="verde">VERDE</option>
-                      <option value="morado">MORADO</option>
-                      <option value="rojo">ROJO</option>
                       <option value="amarillo">AMARILLO</option>
+                      <option value="cyan">CYAN</option>
+                      <option value="gris">GRIS</option>
+                      <option value="morado">MORADO</option>
+                      <option value="naranja">NARANJA</option>
+                      <option value="rojo">ROJO</option>
                       <option value="rosado">ROSADO</option>
+                      <option value="verde">VERDE</option>
+                      <option value="vinotinto">VINOTINTO</option>
+                      <!-- Nuevos colores -->
+                      <option value="jade">JADE</option>
+                      <option value="ambar">AMBAR</option>
+                      <option value="azul rey">AZUL REY</option>
+                      <option value="pardo">PARDO</option>
+                      <option value="carmin">CARMIN</option>
                     </select>
                   </div>
                 </div>
@@ -197,7 +207,7 @@
       </div>
     </form>
 
-    <!-- Inicio del modal de datos para iniciar-->
+    <!-- Inicio del modal de datos para editar-->
 
     <form action="" method="POST" id="RegistrarEnHorario2">
       <div class="modal fade" id="ModalLLenarHorario2" tabindex="-1">
@@ -248,13 +258,24 @@
                   <div class="col-12">
                     <b>COLOR</b>
                     <select class="selectpicker" data-width="100%" data-size="3" name="color_horarioE" id="color_horarioE">
-                      <option value="null">--SELECCIONE--</option>
+                    <option value="null">--SELECCIONE--</option>
                       <option value="azul">AZUL</option>
-                      <option value="verde">VERDE</option>
-                      <option value="morado">MORADO</option>
-                      <option value="rojo">ROJO</option>
                       <option value="amarillo">AMARILLO</option>
+                      <option value="cyan">CYAN</option>
+                      <option value="gris">GRIS</option>
+                      <option value="morado">MORADO</option>
+                      <option value="naranja">NARANJA</option>
+                      <option value="rojo">ROJO</option>
                       <option value="rosado">ROSADO</option>
+                      <option value="verde">VERDE</option>
+                      <option value="vinotinto">VINOTINTO</option>
+                      <!-- Nuevos colores -->
+                      <option value="jade">JADE</option>
+                      <option value="ambar">AMBAR</option>
+                      <option value="azul rey">AZUL REY</option>
+                      <option value="pardo">PARDO</option>
+                      <option value="carmin">CARMIN</option>
+
                     </select>
                   </div>
                 </div>

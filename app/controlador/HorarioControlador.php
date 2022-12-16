@@ -12,9 +12,9 @@ class HorarioControlador
 		$respuesta = HorarioModelo::ListarHorario($sede);
 		return $respuesta;
 	}
-	public function EliminarHorario($id,$id_salon)
+	public function EliminarHorario($id, $id_salon)
 	{
-		$respuesta = HorarioModelo::EliminarHorario($id,$id_salon);
+		$respuesta = HorarioModelo::EliminarHorario($id, $id_salon);
 		return $respuesta;
 	}
 	public function ConsultarHorario($id)
@@ -67,8 +67,7 @@ class HorarioControlador
 
 
 
-if (isset($_POST["opcion"])) 
-{
+if (isset($_POST["opcion"])) {
 	if ($_POST["opcion"] == "GuardarHorario") {
 		$sede = (isset($_POST['sede'])) ? $_POST['sede'] : null;
 		$salon = (isset($_POST['salon'])) ? $_POST['salon'] : null;
@@ -175,7 +174,7 @@ if (isset($_POST["opcion"]))
 			$c = $c + 1;
 		}
 		$horario = $horario . '</tbody>';
-		
+
 
 		$horario = $horario . '
             
@@ -196,53 +195,48 @@ if (isset($_POST["opcion"]))
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "ListarHorario")
-	{
+	} else if ($_POST["opcion"] == "ListarHorario") {
 		$sede = (isset($_POST['sede'])) ? $_POST['sede'] : null;
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ListarHorario($sede);
 		echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
-	}
-	else if($_POST["opcion"] == "EliminarHorario")
-	{
+	} else if ($_POST["opcion"] == "EliminarHorario") {
 		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
 		$id_salon = (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
 		$respuesta = new HorarioControlador();
-		$respuesta = $respuesta->EliminarHorario($id_horario,$id_salon);
+		$respuesta = $respuesta->EliminarHorario($id_horario, $id_salon);
 		if ($respuesta) :
 			echo 1;
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarHorario")
-	{
+	} else if ($_POST["opcion"] == "ConsultarHorario") {
 		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarHorario($id_horario);
 		echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
-	}
-	else if($_POST["opcion"] == "ActualizarHorario")
-	{
+	} else if ($_POST["opcion"] == "ActualizarHorario") {
 		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
-		$tabla= (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
-		$competencia= (isset($_POST['competencia'])) ? $_POST['competencia'] : null;
-		$ficha= (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
-		$instructor= (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
-		$id_salon= (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
-		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
-		$horas= (isset($_POST['horas'])) ? $_POST['horas'] : null;
-		
-		$datos=[
-			"id_horario"=>$id_horario,
-			"id_salon"=>$id_salon,
-			"competencia"=>$competencia,
-			"ficha"=>$ficha,
-			"instructor"=>$instructor,
-			"posicion"=>$posicion,
-			"horas"=>$horas,
-			"tabla"=>$tabla
+		$tabla = (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
+		$competencia = (isset($_POST['competencia'])) ? $_POST['competencia'] : null;
+		$ficha = (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
+		$instructor = (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
+		$id_salon = (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
+		$posicion = (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas = (isset($_POST['horas'])) ? $_POST['horas'] : null;
+		//Resultados
+		$resultados = (isset($_POST['resultados'])) ? $_POST['resultados'] : null;
+
+		$datos = [
+			"id_horario" => $id_horario,
+			"id_salon" => $id_salon,
+			"competencia" => $competencia,
+			"ficha" => $ficha,
+			"instructor" => $instructor,
+			"posicion" => $posicion,
+			"horas" => $horas,
+			"tabla" => $tabla,
+			"resultado" => $resultados
 		];
 
 		$respuesta = new HorarioControlador();
@@ -252,27 +246,25 @@ if (isset($_POST["opcion"]))
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "EditarHorario")
-	{
+	} else if ($_POST["opcion"] == "EditarHorario") {
 		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
-		$tabla= (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
-		$competencia= (isset($_POST['competencia'])) ? $_POST['competencia'] : null;
-		$ficha= (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
-		$instructor= (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
-		$id_salon= (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
-		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
-		$horas= (isset($_POST['horas'])) ? $_POST['horas'] : null;
+		$tabla = (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
+		$competencia = (isset($_POST['competencia'])) ? $_POST['competencia'] : null;
+		$ficha = (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
+		$instructor = (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
+		$id_salon = (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
+		$posicion = (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas = (isset($_POST['horas'])) ? $_POST['horas'] : null;
 
-		$datos=[
-			"id_horario"=>$id_horario,
-			"id_salon"=>$id_salon,
-			"competencia"=>$competencia,
-			"ficha"=>$ficha,
-			"instructor"=>$instructor,
-			"posicion"=>$posicion,
-			"horas"=>$horas,
-			"tabla"=>$tabla
+		$datos = [
+			"id_horario" => $id_horario,
+			"id_salon" => $id_salon,
+			"competencia" => $competencia,
+			"ficha" => $ficha,
+			"instructor" => $instructor,
+			"posicion" => $posicion,
+			"horas" => $horas,
+			"tabla" => $tabla
 		];
 
 		$respuesta = new HorarioControlador();
@@ -282,104 +274,92 @@ if (isset($_POST["opcion"]))
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "BorrarCasillaHorario")
-	{
+	} else if ($_POST["opcion"] == "BorrarCasillaHorario") {
 		$id_horario = (isset($_POST['id_horario'])) ? $_POST['id_horario'] : null;
-		$tabla= (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
-		$instructor= (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
-		$id_salon= (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
-		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
-		$horas=0;
+		$tabla = (isset($_POST['tabla'])) ? $_POST['tabla'] : null;
+		$instructor = (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
+		$id_salon = (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
+		$posicion = (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas = 0;
 
-		$datos=[
-			"id_horario"=>$id_horario,
-			"id_salon"=>$id_salon,
-			"instructor"=>$instructor,
-			"posicion"=>$posicion,
-			"horas"=>$horas,
-			"tabla"=>$tabla
+		$datos = [
+			"id_horario" => $id_horario,
+			"id_salon" => $id_salon,
+			"instructor" => $instructor,
+			"posicion" => $posicion,
+			"horas" => $horas,
+			"tabla" => $tabla
 		];
 
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->BorrarCasillaHorario($datos);
-		
+
 		if ($respuesta) :
 			echo 1;
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarPosicion")
-	{
-		$instructor= (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
-		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
-		$horas= (isset($_POST['horas'])) ? $_POST['horas'] : null;
+	} else if ($_POST["opcion"] == "ConsultarPosicion") {
+		$instructor = (isset($_POST['instructor'])) ? $_POST['instructor'] : null;
+		$posicion = (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas = (isset($_POST['horas'])) ? $_POST['horas'] : null;
 
-		$datos=[
-			"instructor"=>$instructor,
-			"posicion"=>$posicion,
-			"horas"=>$horas,
+		$datos = [
+			"instructor" => $instructor,
+			"posicion" => $posicion,
+			"horas" => $horas,
 		];
 
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarPosicion($datos);
-		
+
 		if ($respuesta) :
 			echo 1;
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarPosicionFicha")
-	{
-		$ficha= (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
-		$posicion= (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
-		$horas= (isset($_POST['horas'])) ? $_POST['horas'] : null;
+	} else if ($_POST["opcion"] == "ConsultarPosicionFicha") {
+		$ficha = (isset($_POST['ficha'])) ? $_POST['ficha'] : null;
+		$posicion = (isset($_POST['posicion'])) ? $_POST['posicion'] : null;
+		$horas = (isset($_POST['horas'])) ? $_POST['horas'] : null;
 
-		$datos=[
-			"ficha"=>$ficha,
-			"posicion"=>$posicion,
-			"horas"=>$horas,
+		$datos = [
+			"ficha" => $ficha,
+			"posicion" => $posicion,
+			"horas" => $horas,
 		];
 
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarPosicionFicha($datos);
-		
+
 		if ($respuesta) :
 			echo 1;
 		else :
 			echo 2;
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarHorarioInstructor")
-	{
-		$id_instructor= (isset($_POST['id_instructor'])) ? $_POST['id_instructor'] : null;
+	} else if ($_POST["opcion"] == "ConsultarHorarioInstructor") {
+		$id_instructor = (isset($_POST['id_instructor'])) ? $_POST['id_instructor'] : null;
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarHorarioInstructor($id_instructor);
-		if ($respuesta==false) :
+		if ($respuesta == false) :
 			echo 1;
 		else :
 			echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarHorarioFicha")
-	{
-		$id_ficha= (isset($_POST['id_ficha'])) ? $_POST['id_ficha'] : null;
+	} else if ($_POST["opcion"] == "ConsultarHorarioFicha") {
+		$id_ficha = (isset($_POST['id_ficha'])) ? $_POST['id_ficha'] : null;
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarHorarioFicha($id_ficha);
-		if ($respuesta==false) :
+		if ($respuesta == false) :
 			echo 1;
 		else :
 			echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
 		endif;
-	}
-	else if($_POST["opcion"] == "ConsultarHorarioSalon")
-	{
+	} else if ($_POST["opcion"] == "ConsultarHorarioSalon") {
 		$id_salon = (isset($_POST['id_salon'])) ? $_POST['id_salon'] : null;
 		$respuesta = new HorarioControlador();
 		$respuesta = $respuesta->ConsultarHorarioSalon($id_salon);
-		if ($respuesta==false) :
+		if ($respuesta == false) :
 			echo 1;
 		else :
 			echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);

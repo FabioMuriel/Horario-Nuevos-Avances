@@ -63,35 +63,116 @@ text-align: left;
 }
 
 .cuadroRojo{
-  border-color:rgb(158, 30, 27);
+  border-color:rgb(247, 17, 13);
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
-  background:rgb(158, 30, 27);
+  background:rgb(247, 17, 13);
   color:white;
   text-align: center;
  }
 
  .cuadroAmarillo{
-  border-color:rgb(165, 168, 8);
+  border-color:rgb(191, 194, 34);
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
-  background:rgb(165, 168, 8);
+  background:rgb(191, 194, 34);
   color:white;
   text-align: center;
  }
 
  .cuadroRosado{
-  border-color:rgb(179, 11, 131);
+  border-color:rgb(231, 17, 178);
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
-  background:rgb(179, 11, 131);
+  background:rgb(231, 17, 178);
   color:white;
   text-align: center;
  }
 
+ .cuadroGris{
+  border-color: #484b57;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background: #484b57;
+  color:white;
+  text-align: center;
+ }
+ .cuadroNaranja{
+  border-color:rgb(255, 116, 3);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background:rgb(255, 116, 3);
+  color:white;
+  text-align: center;
+ }
+ .cuadroVinotinto{
+  border-color: #820000;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background: #820000;
+  color:white;
+  text-align: center;
+ }
+ .cuadroCyan{
+  border-color: #24b4b4;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background: #24b4b4;
+  color:white;
+  text-align: center;
+ }
+ .cuadroJade{
+  border-color: #00a86b;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background: #00a86b;
+  color:white;
+  text-align: center;
+ }
+ .cuadroAmbar{
+  border-color: #ffbf00;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background: #ffbf00;
+  color:white;
+  text-align: center;
+ }
+ .cuadroRey{
+  border-color: #1905a0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background:#1905a0;
+  color:white;
+  text-align: center;
+ }
+ .cuadroPardo{
+  border-color: #643c23;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background:#643c23;
+  color:white;
+  text-align: center;
+ }
+ .cuadroCarmin{
+  border-color: #960018;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  background:#960018;
+  color:white;
+  text-align: center;
+ }
 .btnAgregarAHorario{
    padding: 0px 3px;
    font-size: 14px;
@@ -101,8 +182,6 @@ text-align: left;
    text-align: center;
    display: none;
  }
-
-
  
 #days-chose{
  display: none;

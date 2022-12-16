@@ -164,7 +164,7 @@ class HorarioModelo
     static public function ConsultarHorarioInstructor($id)
     {
             $z = Conexion::conectar()->prepare("SELECT HI.tbl_horario_POSICION as posicion, F.tbl_ficha_CODIGO as ficha, 
-            F.tbl_ficha_GRUPO as grupo, C.tbl_competencia_NOMBRE as competencia, S.tbl_salon_NOMBRE as salon FROM 
+            F.tbl_ficha_GRUPO as grupo, C.tbl_competencia_NOMBRE as competencia, S.tbl_salon_NOMBRE as FROM 
             tbl_instructor_horario as HI INNER JOIN tbl_ficha as F on HI.tbl_ficha_ID=F.tbl_ficha_ID INNER JOIN 
             tbl_competencia as C on HI.tbl_competencia_ID=C.tbl_competencia_ID INNER JOIN tbl_salon as S on 
             HI.tbl_salon_ID=S.tbl_salon_ID WHERE HI.tbl_instructor_ID=:id_instructor");
